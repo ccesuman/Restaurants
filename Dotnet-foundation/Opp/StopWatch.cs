@@ -1,4 +1,4 @@
-﻿namespace DotNetFoundation.Fundamentals.OOP.Encapsulation
+﻿namespace Encapsulation
 {
     public class StopWatch
     {
