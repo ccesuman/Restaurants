@@ -1,24 +1,32 @@
-﻿using Encapsulation;
+﻿//using Encapsulation;
 
-var manager = new PostManager();
+//var claim = new Claim(new EmailNotificationService());
+//claim.GetClaimNotification();
 
-manager.CreatePost("What is C#?", "Basic explanation needed");
-manager.CreatePost("Encapsulation in OOP", "Explain with example");
+//var manager = new PostManager();
 
-Console.WriteLine("All Posts:");
-foreach (var post in manager.GetAllPosts())
-{
-    Console.WriteLine($"{post.Id}. {post.Title} (Score: {post.GetScore()})");
-}
+//manager.CreatePost("What is C#?", "Basic explanation needed");
+//manager.CreatePost("Encapsulation in OOP", "Explain with example");
 
-Console.WriteLine("\nDeleting post with Id = 1");
-manager.DeletePost(1);
+//Console.WriteLine("All Posts:");
+//foreach (var post in manager.GetAllPosts())
+//{
+//    Console.WriteLine($"{post.Id}. {post.Title} (Score: {post.GetScore()})");
+//}
 
-Console.WriteLine("\nRemaining Posts:");
-foreach (var post in manager.GetAllPosts())
-{
-    Console.WriteLine($"{post.Title}");
-}
+//Console.WriteLine("\nDeleting post with Id = 1");
+//manager.DeletePost(1);
 
+//Console.WriteLine("\nRemaining Posts:");
+//foreach (var post in manager.GetAllPosts())
+//{
+//    Console.WriteLine($"{post.Title}");
+//}
+
+//Console.ReadLine();
+
+using Encapsulation;
+
+InterViewPreprationQuestions.FindSecHiestSalary();
+InterViewPreprationQuestions.FrequecyOfCharacter();
 Console.ReadLine();
- 

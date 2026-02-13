@@ -1,4 +1,4 @@
-﻿using Encapsulation;
+﻿namespace Encapsulation;
 
 public class PostManager
 {
