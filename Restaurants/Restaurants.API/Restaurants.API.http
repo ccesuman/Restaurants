@@ -4,7 +4,26 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-@id=1
+@id=4
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+
+###
+
+
+POST {{Restaurants.API_HostAddress}}/api/restaurants
+Content-Type: application/json
+
+{
+  
+   "Name": "PBbb",
+  "Description": "pbbb (short for Kentucky Fried Chicken) is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken.",
+  "Category": "Indian",
+  "HasDelivery": true,
+  "ContactEmail": "contact@PBbb.com",
+  "ContactNumber": "215478988",
+  "City": "London",
+  "Street": "Cork St 5",
+  "PostalCode": "848213"
+}
 
 ###
