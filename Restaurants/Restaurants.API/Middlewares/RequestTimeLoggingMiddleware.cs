@@ -8,7 +8,7 @@ public class RequestTimeLoggingMiddleware(ILogger<RequestTimeLoggingMiddleware> 
     {
         var stopwatch = Stopwatch.StartNew();
 
-        await next.Invoke(context);
+        await next.Invoke(context);    
 
         stopwatch.Stop();
         if (stopwatch.Elapsed.TotalMilliseconds / 1000 > 4)

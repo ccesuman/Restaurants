@@ -15,7 +15,7 @@ Content-Type: application/json
 
 {
   
-   "Name": "PBbb2",
+   "Name": "PBbb4",
   "Description": "pbbb (short for Kentucky Fried Chicken) is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken.",
   "Category": "Indian",
   "HasDelivery": true,
@@ -33,3 +33,42 @@ Content-Type: application/json
 ###
 @id=4
 DELETE {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+
+###
+
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/{id}
+Content-Type: application/json
+
+{
+  
+}
+
+###
+
+@restaurantId = 4
+POST {{Restaurants.API_HostAddress}}/api/restaurants/{{restaurantId}}/dishes
+Content-Type: application/json
+
+{
+  "Name": "KFC4",
+  "Description": "Hot Chicken",
+  "Price": 8,
+  "KiloCalories": 9
+  
+}
+
+###
+
+@restaurantId = 2
+GET {{Restaurants.API_HostAddress}}/api/restaurants/{{restaurantId}}/dishes
+
+###
+
+GET {{Restaurants.API_HostAddress}}/api/restaurants/7/dishes/1
+
+###
+
+@restaurantId =2
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/{{restaurantId}}/dishes
+
+###
