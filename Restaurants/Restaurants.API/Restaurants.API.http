@@ -1,5 +1,5 @@
 @Restaurants.API_HostAddress = http://localhost:61941
-@token = 
+@token = CfDJ8KJXnzV7ultOlnImQiJxTk_lYb8YVjQF-af5SNU2HEY1SciemmDXN0yqvMpZwq8Jc296K1ouJbIoC3Qj14GztW9iURg4339N0mHCM6PmsBJD3q8tzb8E9hDPlmr6h35GB2mq34vdiXUNWTW3VmRWs_VZ9oqKtSK7IjVeHXaDiEj04mhziqIWWmtDLCbXdT41FhEMJPdXV5XDb4W1kHKLgSavVxm8ss-IPkYduQxJGsExU22A2Cce_1DUpk6IeGfUErcFT9KOpeY4PizUpuzA394Dkaq52r12Bp6w9NbOyXbd0xjXxi52pjOZz5UQHOddOCg7FmNEvrRE6a9mMzIT6HGug7V35hzzgsGIBRu8Iey8VJFu9mQXCOYw9SUqSPiMMdk46HpjfgYPZKES5H5MeHx8rePp1PiMObTSNMPvktsSsBCHJu9M61hQxDtTuNAYA4Lc5D7FxFaoQUvQ1SlWTao2COtbMXdiuyK95oGbZ3CUQD_wQIH_hFC9xyMfaG4IWdeVkpxCkD-Z0D3QCRAg7TpLtqiFY50Yl2kDS73YM-5BqgxVEr3oggQE5-TsBybNfOa5MYJ41J2jo5i7v5d5mpc6zVtHlXqgG5ssSZQwPivQzekdDDAHHTlU98Y1TWX2FyIZ2m2yp_Nn69i3BJrk4t6R5ji2xgRtfN0c04g6OwEqv6O6uRYLKC51RBHm949Th4kW9OzMO_ZEcJvJXnxlK7wVRpxcIK0g7nREg95VE6efJFBIFzgG25wwiUtf8LGK3ROpF3PRR6LifrbgINDU1N72FnOB0c9brN0T83v2GQrF
 
 GET {{Restaurants.API_HostAddress}}/api/restaurants
 
@@ -12,15 +12,16 @@ Authorization : Bearer {{token}}
 
 
 POST {{Restaurants.API_HostAddress}}/api/restaurants
+Authorization : Bearer {{token}}
 Content-Type: application/json
 
 {
   
-   "Name": "PBbb4",
+   "Name": "PBbb8",
   "Description": "pbbb (short for Kentucky Fried Chicken) is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken.",
   "Category": "Indian",
   "HasDelivery": true,
-  "ContactEmail": "contact@PBbb.com",
+  "ContactEmail": "contac@PBbb.com",
   "ContactNumber": "215478988",
   "City": "London",
   "Street": "Cork St 5",
@@ -75,3 +76,11 @@ DELETE {{Restaurants.API_HostAddress}}/api/restaurants/{{restaurantId}}/dishes
 ###
 
 
+
+POST {{Restaurants.API_HostAddress}}/api/identity/login
+Content-Type: application/json
+
+{
+  "email": "Owner@gmail.com",
+  "password": "User@12345"
+}

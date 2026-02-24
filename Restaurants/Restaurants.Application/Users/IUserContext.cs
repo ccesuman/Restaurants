@@ -1,5 +1,4 @@
-﻿
-namespace Restaurants.Application.Restaurants.Users;
+﻿namespace Restaurants.Application.Users;
 
 public interface IUserContext
 {
