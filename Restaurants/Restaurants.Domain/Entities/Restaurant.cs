@@ -16,6 +16,10 @@
 
         public List<Dish> Dishes { get; set; } = new List<Dish>();
 
+        public User Owner { get; set; } = new User();
+
+        public string OwnerId { get; set; } = string.Empty;
+
 
     }
 }

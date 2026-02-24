@@ -8,5 +8,7 @@ namespace Restaurants.Domain.Entities
 
         public string? Nationality { get; set; }
 
+        public List<Restaurant> OwnedRestaurants { get; set; } = [];
+
     }
 }
