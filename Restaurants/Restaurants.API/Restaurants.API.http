@@ -1,5 +1,5 @@
 @Restaurants.API_HostAddress = http://localhost:61941
-@token = CfDJ8KJXnzV7ultOlnImQiJxTk8lLhZjh07XBZtOCeoGENqRxVP2zQRlTWKYhj4on2Ne_l72KmPtniUccT2Vu0ms6rCEmFgZG4uMs_ZoT-SrGmNFogdfWMU8-UOrzZujEuDBCKtG_6c7GSsTUZD4MMEKPOVVHwvSyvFqmZ5_5Rv7xKL3UbRcL62HP4P1nIH7m6-TZReUvEWjV157yNO0b69NrSsgLatguqFs0Rn3cS8OCulTdF-c99ihoAk_JKNfaUb5yJYRQnRmkb0WAne5ADOIGC7RrNZSqjyoUB4S2XP9-o1Q4iu2j_8V6H9tPe4o69KkxOcgzMWkPqcR1WC0M4yUA5vYP39I4jvQdXGf1CTFdnjAoDz0TSEyFAhzdtpwfpGh7enlH8YnBV4mtALWF1S-fGrxxipLjJh6m-qz0OxS5Jq_nOr3vZLWMJw9-2grw2ZQYEQN-uuiy1OavKjLsDYzI5v_nwA0C4yqZdLHrmbIAuVzCwduk-sNk5_vH5DJs2t0H4ZhUj_a_xHbXy9pOxKnJ6wqM8TGHmCrOKEpYrkNZdFRh8A2WultX0kjw_Fq8fvHXZ5JmScgWhZpsqzgUEZN07NaXuIzVwy01gZgdh3CQ97-ezqJa-mp78VhHdDUFxCC1KV9a01Uwp0E_XFWdgovBv7m-XNdXlX8RWhzaIIb9SCD0Y3qhPLOWTdmrbnukk2_-kqB0BpMzqnQ_G_kFNbAox1U9mQidNyssZml9ZO1XAEZwAmTATOBOIzTgWlci1Vql0so2Y9AlOJil8encS_ob96TRjA_Lr7QYI1AcywQH2utsW2UkfS1wY4o_cJjL4Lws8KWwOrRHdVKdGsrFp72Yuc3kB6ir71Mw7M5XAAGNvcFVIWpO2NV2kZOhOsexaoIig
+@token = CfDJ8KJXnzV7ultOlnImQiJxTk-9ezG9L8AmNT1JWN5SfxPw40vhLaW1bdfhy9z3NsIKF6-jsCXoD-51Eyc6iEPN781i-r5S4V1VP8goTLYQff4SsLK3BiWLU1AXmTY3Ka1WgtRNdHGgHyLXC9QA1I5CtweyJ1KC6tu_QPUww5yjp1JSwCZbygVdM8ilff_GdrlUd1LY9CKujdJR-VCnVi3m0leFN2rSSfexHsWetvKB6x0nCIrSwRSYzOwjqiEp6GSsierStUp1zwxiv550k8sNMRNUYyxL0kKpu85Vs-pmBanFRxfTJFe0aowzH0lDIxYwjIUUzMXeKIh_Zap3k3ULxbYtW45qs9KXhqvpnsExnLQ17A15-WReFfPhRgbw6IcZGpyNO_4AnP5RvvhAy1bAILcUCRgowXWDRIqb5Vk0vuWryJmoeSv51oZto33vpPsToON_rVyV9S0Uih5DinZt93MAkeQMDwZ-XisuKhZUHVt1sSEWBebFL_eU6YYY3F3Ov2C728ejnViChNX_K_cdPRgwHCORo8VUbeehzafzShCQvaZ9te0GM-_6rQvfrZBr4uKbcXUTfejuNbVFjBkrNs3LA4FdFYWWqTKNMOdyIx6FiPsMhXMbvXma1jR_dUJn0aJrec0eQkpiayKWzUJ5USjfQvia7nKpvapkq5TYGnVwjOnn7bACZWPuBfC2ANLzFg0ttg8FkOAaRqrwUXpNNg7k6vTPR6tUBwylN92fpJLfJK2gEHAAPVPZ5kfIE6WWa2yt0KelC9Ce7PYpvPiCWbV1U3P12gPf_FQqjrn7mw8P
 
 GET {{Restaurants.API_HostAddress}}/api/restaurants
 
@@ -17,11 +17,11 @@ Content-Type: application/json
 
 {
   
-   "Name": "PBbb9",
-  "Description": "pbbb (short for Kentucky Fried Chicken) is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken.",
+   "Name": "Owner22",
+  "Description": "Owner policy check pbbb (short for Kentucky Fried Chicken) is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken.",
   "Category": "Indian",
   "HasDelivery": true,
-  "ContactEmail": "conta9@PBbb.com",
+  "ContactEmail": "conta11@PBbb.com",
   "ContactNumber": "215478988",
   "City": "London",
   "Street": "Cork St 5",
@@ -81,10 +81,18 @@ POST {{Restaurants.API_HostAddress}}/api/identity/login
 Content-Type: application/json
 
 {
-  "email": "Owner@gmail.com",
-  
+  "email": "Owner2@gmail.com",
   "password": "User@12345"
-
 }
 
+###
 
+POST {{Restaurants.API_HostAddress}}/api/identity/userRole
+Authorization: Bearer {{$bearerToken}}
+Content-Type: application/json
+
+{
+  //AssignUserRoleCommand
+}
+
+###
