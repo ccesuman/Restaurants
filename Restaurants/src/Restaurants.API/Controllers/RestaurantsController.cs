@@ -73,7 +73,7 @@ public class RestaurantsController(IMediator mediator): ControllerBase
         var commdand = new UploadRestaurantLogoCommand()
         {
             RestaurantId = id,
-            FileName = file.FileName,
+            FileName = $"{id}-{file.FileName}",
             File = stream
         };
 
