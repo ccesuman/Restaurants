@@ -25,11 +25,12 @@ try
     app.UseMiddleware<ErrorHandlingMiddleware>();
     app.UseMiddleware<RequestTimeLoggingMiddleware>();
 
-    if (app.Environment.IsDevelopment())
-    {
-        app.UseSwagger();
+    // Enable Swagger in all environments for testing purposes
+    //if (app.Environment.IsDevelopment())
+    //{
+    app.UseSwagger();
         app.UseSwaggerUI();
-    }
+   // }
 
     app.UseHttpsRedirection();
     app.MapGroup("api/identity")
