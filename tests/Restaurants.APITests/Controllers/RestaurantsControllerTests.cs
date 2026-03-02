@@ -123,22 +123,5 @@ namespace Restaurants.APITests.Controllers
 
         #endregion
 
-        [Fact()]
-            public void CreateRestaurantTest()
-            {
-
-            }
-
-            [Fact()]
-            public void UpdateRestaurantTest()
-            {
-
-            }
-
-            [Fact()]
-            public void DeleteRestaurantTest()
-            {
-
-            }
         }
     }
