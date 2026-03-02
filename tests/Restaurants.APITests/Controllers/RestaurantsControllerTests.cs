@@ -29,6 +29,9 @@ namespace Restaurants.APITests.Controllers
                     service.AddSingleton<IPolicyEvaluator, FakePolicyEvaluator>();
                     service.Replace(ServiceDescriptor.Scoped(typeof(IRestaurantsRepository),
                         _ => _restaurantsRepositoryMock.Object));
+
+                    service.Replace(ServiceDescriptor.Scoped(typeof(IRestaurantsSeeder),
+                        _ => _restaurantsSeederMock.Object));
                 });
             });
         }
