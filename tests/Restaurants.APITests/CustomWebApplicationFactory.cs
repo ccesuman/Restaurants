@@ -11,13 +11,28 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         // ✅ FIX 1: Prevent config crash
+        //builder.ConfigureAppConfiguration((context, config) =>
+        //{
+        //    var settings = new Dictionary<string, string>
+        //{
+        //    {"ConnectionStrings:RestaurantsDb", "Fake"},
+        //    {"BlobStorage:ConnectionString", "Fake"}
+        //};
+
+        //    config.AddInMemoryCollection(settings);
+        //});
+
+        // ✅ VERY IMPORTANT
+        builder.UseEnvironment("Testing");
+
         builder.ConfigureAppConfiguration((context, config) =>
         {
             var settings = new Dictionary<string, string>
-        {
-            {"ConnectionStrings:RestaurantsDb", "Fake"},
-            {"BlobStorage:ConnectionString", "Fake"}
-        };
+{
+    {"ConnectionStrings:RestaurantsDb", "Fake"},
+    {"BlobStorage:ConnectionString", "Fake"},
+    {"ApplicationInsights:ConnectionString", "Fake"}, // ✅ ADD
+};
 
             config.AddInMemoryCollection(settings);
         });
