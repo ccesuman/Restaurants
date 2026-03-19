@@ -12,7 +12,7 @@
     "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": false,
+      "launchBrowser": true,
       "launchUrl": "api/restaurants",
       "applicationUrl": "http://localhost:61941",
       "environmentVariables": {
