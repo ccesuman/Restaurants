@@ -38,6 +38,23 @@ Please refer to the official documentation of each package for more details and 
 
 To build the project, open the `Restaurants.sln` file in Visual Studio and build the solution.
 
+## 🔧 Setup Instructions
+
+1. Clone the repository
+
+2. Add user secrets:
+
+```bash
+dotnet user-secrets set "ConnectionStrings:RestaurantsDb" "your-db-connection"
+dotnet user-secrets set "BlobStorage:ConnectionString" "your-blob-connection"
+```
+
+3. Run the application:
+
+```bash
+dotnet run
+```
+
 ### Running
 
 To run the project, set `Restaurants.API` as the startup project in Visual Studio and start the application.
