@@ -6,7 +6,13 @@
     <Nullable>enable</Nullable>
     <UserSecretsId>29df20e2-51e4-4812-97b6-b75494ff5103</UserSecretsId>
   </PropertyGroup>
-
+	
+	<ItemGroup>
+		<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+			<_Parameter1>Restaurants.APITests</_Parameter1>
+		</AssemblyAttribute>
+	</ItemGroup>
+	
   <ItemGroup>
     <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />

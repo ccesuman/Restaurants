@@ -14,19 +14,22 @@ using Restaurants.Infrastructure.Seeders;
 using Xunit;
 namespace Restaurants.APITests.Controllers
 {
-    public class RestaurantsControllerTests : IClassFixture<WebApplicationFactory<Program>>
+    public class RestaurantsControllerTests : IClassFixture<CustomWebApplicationFactory>
     {
         private readonly WebApplicationFactory<Program> _factory;
+        private readonly HttpClient _client;
+
         private readonly Mock<IRestaurantsRepository> _restaurantsRepositoryMock = new();
         private readonly Mock<IRestaurantsSeeder> _restaurantsSeederMock = new();
 
-        public RestaurantsControllerTests(WebApplicationFactory<Program> factory)
+        public RestaurantsControllerTests(CustomWebApplicationFactory factory)
         {
             _factory = factory.WithWebHostBuilder(builder =>
             {
                 builder.ConfigureTestServices(service =>
                 {
                     service.AddSingleton<IPolicyEvaluator, FakePolicyEvaluator>();
+
                     service.Replace(ServiceDescriptor.Scoped(typeof(IRestaurantsRepository),
                         _ => _restaurantsRepositoryMock.Object));
 
@@ -34,13 +37,15 @@ namespace Restaurants.APITests.Controllers
                         _ => _restaurantsSeederMock.Object));
                 });
             });
+
+            _client = _factory.CreateClient();
         }
 
         #region GetRestaurant
 
 
 
-            [Fact()]
+        [Fact()]
             public async Task GetAll_ForValidRequest_Returns200Ok()
             {
                 // Arrange
